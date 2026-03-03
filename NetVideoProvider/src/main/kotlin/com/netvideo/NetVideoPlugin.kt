@@ -1,25 +1,11 @@
-package com.example
+package com.netvideo
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
-import com.lagradost.cloudstream3.plugins.Plugin
+import com.lagradost.cloudstream3.CloudstreamPlugin
+import com.lagradost.cloudstream3.DeviceType
 
-@CloudstreamPlugin
-class ExamplePlugin: Plugin() {
-    private var activity: AppCompatActivity? = null
-
-    override fun load(context: Context) {
-        activity = context as? AppCompatActivity
-
-        // All providers should be added in this manner
-        registerMainAPI(ExampleProvider())
-
-        openSettings = {
-            val frag = BlankFragment(this)
-            activity?.let {
-                frag.show(it.supportFragmentManager, "Frag")
-            }
-        }
+class NetVideoPlugin: CloudstreamPlugin() {
+    override fun load(context: android.content.Context) {
+        // Registra el nuevo nombre de la clase aquí
+        registerMainAPI(NetVideoProvider())
     }
 }
