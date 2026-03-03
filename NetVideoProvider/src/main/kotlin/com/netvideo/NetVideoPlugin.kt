@@ -5,7 +5,7 @@ import com.lagradost.cloudstream3.DeviceType
 
 class NetVideoPlugin: CloudstreamPlugin() {
     override fun load(context: android.content.Context) {
-        // Registra el nuevo nombre de la clase aquí
+        // Registra el proveedor usando el nuevo paquete
         registerMainAPI(NetVideoProvider())
     }
 }
