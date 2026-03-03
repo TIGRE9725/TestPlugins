@@ -84,11 +84,12 @@ class NetVideoProvider : MainAPI() {
                     val arr = JSONArray(it)
                     for (i in 0 until arr.length()) {
                         val obj = arr.getJSONObject(i)
-                        episodes.add(newTvSeriesEpisode(obj.getString("stream")) {
-                            this.name = obj.optString("name")
-                            this.episode = obj.optInt("number")
-                            this.season = sNum
-                        })
+                        episodes.add(TvSeriesEpisode(
+                            name = obj.optString("name"),
+                            episode = obj.optInt("number"),
+                            season = sNum,
+                            data = obj.getString("stream") 
+                        ))
                     }
                 }
             }
