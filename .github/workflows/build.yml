@@ -29,6 +29,7 @@ jobs:
         with:
           ref: "builds"
           path: "builds"
+        continue-on-error: true
       
       - name: Clean old builds
         run: rm $GITHUB_WORKSPACE/builds/*.cs3
