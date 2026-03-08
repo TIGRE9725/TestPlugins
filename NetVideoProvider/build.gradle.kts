@@ -9,12 +9,12 @@ dependencies {
 version = 1
 
 cloudstream {
-    description = "Películas y Series de NetVideo con Failover" [cite: 5]
-    authors = listOf("NetVideo") // Pon tu nombre aquí [cite: 5]
+    description = "Películas y Series de NetVideo con Failover"
+    authors = listOf("NetVideo")
     status = 1 
-    tvTypes = listOf("Movie", "TvSeries") // Añadimos TvSeries
+    tvTypes = listOf("Movie", "TvSeries")
     requiresResources = true
-    language = "es" // Cambiado a español
+    language = "es"
 }
 
 android {
