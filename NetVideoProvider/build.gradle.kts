@@ -18,6 +18,8 @@ cloudstream {
 }
 
 android {
+    namespace = "com.netvideo"
+
     buildFeatures {
         buildConfig = true
         viewBinding = true
