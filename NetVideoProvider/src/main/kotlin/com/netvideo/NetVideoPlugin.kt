@@ -1,11 +1,12 @@
 package com.netvideo
 
-import com.lagradost.cloudstream3.CloudstreamPlugin
-import com.lagradost.cloudstream3.DeviceType
+import com.lagradost.cloudstream3.plugins.CloudstreamPlugin
+import com.lagradost.cloudstream3.plugins.Plugin
+import android.content.Context
 
-class NetVideoPlugin: CloudstreamPlugin() {
-    override fun load(context: android.content.Context) {
-        // Registra el proveedor usando el nuevo paquete
+@CloudstreamPlugin
+class NetVideoPlugin: Plugin() {
+    override fun load(context: Context) {
         registerMainAPI(NetVideoProvider())
     }
 }
