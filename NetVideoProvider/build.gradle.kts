@@ -9,19 +9,19 @@ dependencies {
 version = 1
 
 cloudstream {
-    description = "Películas y Series de NetVideo con Failover"
+    description = "Películas y Series de NetVideo"
     authors = listOf("NetVideo")
     status = 1 
     tvTypes = listOf("Movie", "TvSeries")
-    requiresResources = true
+    requiresResources = false 
     language = "es"
 }
 
 android {
-    namespace = "com.netvideo"
-
+    namespace = "com.netvideo" 
+    
     buildFeatures {
         buildConfig = true
-        viewBinding = true
+        viewBinding = false
     }
 }
