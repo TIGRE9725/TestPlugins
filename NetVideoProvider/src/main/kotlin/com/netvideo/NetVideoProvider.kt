@@ -15,7 +15,7 @@ class NetVideoProvider : MainAPI() {
         "http://186.0.248.95:20202",
         "http://170.246.176.223:12300",
         "http://181.209.112.98:40000",
-        "http://45.225.68.1:8532"
+        "http://186.0.248.91:20202"
     )
 
     override var mainUrl = mirrors[0]
