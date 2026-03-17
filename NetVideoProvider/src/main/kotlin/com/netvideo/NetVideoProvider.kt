@@ -3,9 +3,10 @@ package com.netvideo
 import android.util.Base64
 import com.lagradost.cloudstream3.*
 import com.lagradost.cloudstream3.utils.*
-import com.lagradost.cloudstream3.APIHolder.unixTime
-import com.lagradost.cloudstream3.APIHolder.unixTimeMS
 import com.lagradost.cloudstream3.utils.AppUtils.parseJson
+import com.lagradost.cloudstream3.utils.AppUtils.newEmptyArrayList
+import com.lagradost.cloudstream3.MainAPI
+import com.lagradost.cloudstream3.TvType
 import org.jsoup.Jsoup
 import org.json.JSONArray
 
@@ -130,4 +131,7 @@ class NetVideoProvider : MainAPI() {
         }
         return true
     }
+    // Función de ayuda para Base64 (para evitar errores de referencia)
+    private fun decode(text: String): String {
+        return String(Base64.decode(text, Base64.DEFAULT))
 }
